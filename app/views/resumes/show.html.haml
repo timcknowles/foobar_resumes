@@ -1,0 +1,23 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @resume.title
+%p
+  %b Name:
+  = @resume.name
+%p
+  %b Address:
+  = @resume.address
+  
+%h3 Sections
+
+-@resume.sections.each do |section|
+  =section.title
+
+%p= link_to "New", new_resume_section_path(@resume)
+
+%h3 Options
+= link_to 'Edit', edit_resume_path(@resume)
+\|
+= link_to 'Back', resumes_path
