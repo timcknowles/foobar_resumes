@@ -1,4 +1,6 @@
 class ResumesController < ApplicationController
+
+  before_filter :authenticate_user!, except: [:index]
   # GET /resumes
   # GET /resumes.json
   def index
