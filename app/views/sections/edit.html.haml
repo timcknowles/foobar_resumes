@@ -2,6 +2,6 @@
 
 = render 'form'
 
-= link_to 'Show', @section
+= link_to 'Show', [@resume, @section]
 \|
-= link_to 'Back', sections_path
+= link_to 'Back', resume_sections_path(@resume)
